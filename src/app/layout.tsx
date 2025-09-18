@@ -11,6 +11,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Minoru Farm",
+  robots: {
+    index: false,
+  },
   description: "Minoru Farm. Brighton, Colorado",
 };
 
