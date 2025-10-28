@@ -7,8 +7,8 @@ import { PressLink } from "../components/PressLink";
 export default function Home() {
   return (
     <AppContainer>
-      <div className="row-start-3 row-end-4 col-start-2 col-end-6 md:col-end-7 relative flex justify-start">
-        <h1 className="absolute flex items-center justify-center md:w-full text-[2.5em] tracking-wider md:text-[3.75em] font-[700] top-[5%] right-[8%] w-[180px] leading-9 md:top-[12%] md:left-[36%] mb-4 md:m-0 font-serif">
+      <div className="md:h-[500px] row-start-3 row-end-4 col-start-2 col-end-6 md:col-end-7 relative flex justify-start">
+        <h1 className="absolute flex items-center justify-center md:w-full text-[2.5em] tracking-wider md:text-[3.75em] font-[700] top-[5%] right-[8%] w-[180px] leading-9 md:top-[12%] md:left-[28%] mb-4 md:m-0 font-serif">
           MINORU 実 FARM
         </h1>
         <div className="w-full">
@@ -21,11 +21,11 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="my-[1em] md:my-0 row-start-6 row-end-7 col-start-3 col-end-7 md:col-end-8 relative flex justify-start">
-        <h2 className="font-serif tracking-wide text-[2.5em] md:text-[3.5em] md:top-[-3%] md:left-[-12%] top-[-13%] left-[2%] absolute font-bold text-[#E1B95A]">
+      <div className="md:h-[500px] my-[1em] md:my-0 row-start-5 row-end-6 col-start-3 col-end-7 md:col-end-8 relative flex justify-start">
+        <h2 className="font-serif tracking-wide text-[2.5em] md:text-[3.5em] md:top-[8%] md:left-[-22%] top-[-12%] left-[2%] absolute font-bold text-[#E1B95A]">
           BRIGHTON,
         </h2>
-        <h2 className="text-[2.5em] md:text-[3.5em] absolute md:top-[8%] md:left-[-5%] top-[4%] left-[12%] font-serif font-bold text-[#E1B95A] tracking-wider">
+        <h2 className="text-[2.5em] md:text-[3.5em] absolute md:top-[20%] md:left-[-15%] top-[3%] left-[12%] font-serif font-bold text-[#E1B95A] tracking-wider">
           COLORADO
         </h2>
         <div className="w-full">
@@ -44,7 +44,7 @@ export default function Home() {
         className="flex flex-col gap-6 row-start-11 row-end-12 px-2 col-start-2 col-end-7 md:col-end-5 md:mt-0 mt-8"
       >
         <SectionTitle title="About" />
-        <div className="leading-6 text-[0.9em]">
+        <div className="leading-6 text-[0.9em] md:text-[1em]">
           Minoru Farm operates 4 acres of land in the Front Range town of
           Brighton, Colorado. Established in 2020, the farm practices low-till
           methods and is owned and operated by Jade Sato. <br /> <br />{" "}
