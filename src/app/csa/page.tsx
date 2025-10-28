@@ -47,11 +47,11 @@ export default function CsaPage() {
 
   return (
     <AppContainer>
-      <div className="relative row-start-3 flex justify-center row-end-4 col-start-3 md:col-start-3 col-end-6 md:col-end-8">
-        <h2 className="flex justify-center transform scale-y-[1.18] tracking-widest items-center top-[10%] right-[5%] md:right-[-9%] absolute text-[1.5em] md:text-[2.5em] font-[700] text-[#B58B37]">
+      <div className="relative row-start-3 flex justify-center row-end-4 col-start-3 col-end-6 md:col-end-8">
+        <h2 className="flex justify-center transform tracking-wider items-center top-[10%] right-[-6%] md:right-[-9%] absolute text-[2.25em] md:text-[3em] font-[700] text-[#B58B37] font-serif">
           SUMMER CSA
         </h2>
-        <h2 className="flex justify-center transform scale-y-[1.18] tracking-widest items-center top-[80%] left-[5%] md:left-[-2%] absolute text-[1.5em] md:text-[2.5em] font-[700] text-[#E1B95A] leading-10">
+        <h2 className="flex justify-center transform tracking-wider items-center top-[80%] left-[-6%] md:left-[-2%] absolute text-[2.25em] md:text-[3em] font-[700] text-[#E1B95A] font-serif leading-10">
           WINTER CSA
         </h2>
         <Image
@@ -63,11 +63,11 @@ export default function CsaPage() {
       </div>
 
       <div className="flex gap-2 row-start-6 row-end-7 col-end-7 col-start-3 md:col-start-3 md:col-end-6 my-2">
-        <div className="flex flex-col items-start justify-start w-full h-full">
-          <div className="text-center md:text-start md:text-base font-[600] text-[#E1B95A] font-mono w-full mt-4 md:mt-0">
-            ☀ SUMMER ☀
+        <div className="md:mr-4 flex flex-col items-start justify-start w-full h-full">
+          <div className="md:text-start text-[1.33em] font-[600] text-[#E1B95A] font-serif w-full mt-4 md:mt-0">
+            Summer
           </div>
-          <div className="ml-4 md:ml-0 font-thin my-4 md:text-base text-[0.8em]">
+          <div className="ml-4 md:ml-0 my-4 text-sm">
             <ul className="list-disc space-y-2">
               <li>Sign-up begins January 1st of each year</li>
               <li>
@@ -79,12 +79,12 @@ export default function CsaPage() {
         </div>
       </div>
 
-      <div className="flex gap-2 row-start-7 row-end-8 md:row-start-6 md:row-end-7 md:col-start-6 md:col-end-9 col-start-3 col-end-6 my-2">
+      <div className="flex gap-2 md:ml-4 row-start-7 row-end-8 md:row-start-6 md:row-end-7 md:col-start-6 md:col-end-9 col-start-3 col-end-6 my-2">
         <div className="flex flex-col mb-2 w-full h-full">
-          <div className="text-center md:text-start font-[600] text-[#E1B95A] md:text-base font-mono">
-            ❄ WINTER ❄
+          <div className="md:text-start font-[600] text-[#E1B95A] text-[1.33em] font-serif">
+            Winter
           </div>
-          <div className="font-thin my-4 md:text-base text-[0.8em] ml-4 md:ml-0">
+          <div className="my-4 ml-4 md:ml-0 text-sm">
             <ul className="list-disc space-y-2">
               <li>Sign-up begins September 1st of each year</li>
               <li>
@@ -97,20 +97,21 @@ export default function CsaPage() {
       </div>
 
       <form
-        className="row-start-9 gap-6 flex md:h-[300px] flex-col justify-center items-center text-sm row-end-10 md:col-start-3 md:col-end-8 col-start-2 col-end-7 border-2 px-2 py-5 md:px-4 md:py-12"
+        className="row-start-9 gap-6 flex md:h-[350px] flex-col justify-center items-center text-sm row-end-10 md:col-start-3 md:col-end-8 col-start-2 col-end-7 border-2 px-2 py-5 md:px-4 md:py-12"
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-col gap-2 items-center">
-          <div className="font-[600] font-mono md:text-[1.2em]">
-            INTERESTED IN CSA?
+        <div className="flex flex-col gap-2 md:gap-4 items-center">
+          <div className="font-serif md:text-[1.75em] text-[1.5em]">
+            Interested in CSA?
           </div>
-          <div className="font-thin text-[0.85em] text-center md:text-start">
-            Sign up to hear from us directly when sign-up starts and other news!
+          <div className="text-[0.85em] md:text-[0.9em] w-[80%] text-center">
+            Subscribe below to hear from us directly when sign-up starts and
+            other news!
           </div>
         </div>
         <div className="flex flex-col md:flex md:mt-2 justify-center items-center gap-6">
           <input
-            className="border-2 py-2 px-3 md:w-[325px] w-[250px] text-[0.8em]"
+            className="border-2 py-2 px-3 md:w-[325px] w-[250px]"
             type="email"
             placeholder="Email"
             value={val}
@@ -122,7 +123,7 @@ export default function CsaPage() {
             disabled={isSubmitting}
             className="text-[0.85em] w-[125px] h-min py-3 rounded-2xl bg-[#E1B95A] text-black flex justify-center items-center hover:bg-[#E1B95A]/60 hover:cursor-pointer font-[500]"
           >
-            {isSubmitting ? "Submitting..." : "Submit"}
+            {isSubmitting ? "Loading..." : "Subscribe"}
           </button>
         </div>
         {<div className="md:h-[50px] h-[10px]">{message || ""}</div>}

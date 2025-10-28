@@ -1,77 +1,39 @@
 import Image from "next/image";
 import { AppContainer } from "./AppContainer";
 import Link from "next/link";
-
-const SectionTitle = ({ title }: { title: string }) => {
-  return (
-    <div className="font-[600] font-mono text-[#E1B95A] text-center md:text-start text-[1.1em] md:text-[1.5em]">{`• ${title} •`}</div>
-  );
-};
-
-const PressLink = ({
-  link,
-  title,
-  year,
-  author,
-}: {
-  author: string;
-  year: string;
-  title: string;
-  link: string;
-}) => {
-  return (
-    <div className="border-gray-500 border-t-1 pt-3 flex items-center justify-between">
-      <div>
-        <Link
-          href={link}
-          target="_blank"
-          className="md:hidden md:text-[1em] text-[0.85em] font-[600]"
-        >
-          {title}
-        </Link>
-        <div className="hidden md:flex md:text-[1em] text-[0.85em] font-[600]">
-          {title}
-        </div>
-        <div className="text-[0.75em] font-thin">{author}</div>
-        <div className="text-[0.75em] font-thin">{year}</div>
-      </div>
-      <Link
-        className="border-1 hidden md:flex text-[0.75em] md:text-[0.8em] h-min md:py-2 py-1 rounded-2xl border-[#B58B37] justify-center items-center md:px-3 px-2 hover:bg-gray-100/10 hover:cursor-pointer"
-        href={link}
-        target="_blank"
-      >
-        Read More →
-      </Link>
-    </div>
-  );
-};
+import { SectionTitle } from "../components/SectionTitle";
+import { PressLink } from "../components/PressLink";
 
 export default function Home() {
   return (
     <AppContainer>
       <div className="row-start-3 row-end-4 col-start-2 col-end-6 md:col-end-7 relative flex justify-start">
-        <h1 className="absolute flex items-center justify-center w-[150px] md:w-full text-[1.5em] md:text-[3.25em] font-[700] top-[7%] right-[0%] md:top-[12%] md:left-[28%] scale-y-[1.1] mb-4 md:m-0 tracking-[0.2em]">
+        <h1 className="absolute flex items-center justify-center md:w-full text-[2.5em] tracking-wider md:text-[3.75em] font-[700] top-[5%] right-[8%] w-[180px] leading-9 md:top-[12%] md:left-[36%] mb-4 md:m-0 font-serif">
           MINORU 実 FARM
         </h1>
-        <div className="w-full md:w-[90%]">
+        <div className="w-full">
           <Image
             src="/minoru-farm-butterfly.jpg"
             alt="minoru farm butterfly"
-            width={500}
-            height={300}
+            width={400}
+            height={200}
             className="h-full w-full object-contain"
           />
         </div>
       </div>
       <div className="my-[1em] md:my-0 row-start-6 row-end-7 col-start-3 col-end-7 md:col-end-8 relative flex justify-start">
-        <h2 className="location-title">BRIGHTON,</h2>
-        <h2 className="state-title">COLORADO</h2>
-        <div className="w-full md:w-[95%]">
+        <h2 className="font-serif tracking-wide text-[2.5em] md:text-[3.5em] md:top-[-3%] md:left-[-12%] top-[-13%] left-[2%] absolute font-bold text-[#E1B95A]">
+          BRIGHTON,
+        </h2>
+        <h2 className="text-[2.5em] md:text-[3.5em] absolute md:top-[8%] md:left-[-5%] top-[4%] left-[12%] font-serif font-bold text-[#E1B95A] tracking-wider">
+          COLORADO
+        </h2>
+        <div className="w-full">
           <Image
             src="/minoru-farm-tunnel.jpg"
             alt="minoru farm tunnel"
-            width={600}
-            height={400}
+            width={400}
+            height={200}
             className="h-full w-full object-contain"
           />
         </div>
@@ -79,39 +41,38 @@ export default function Home() {
 
       <div
         id="about"
-        className="flex flex-col justify-center gap-2 w-full p-2 row-start-11 row-end-12 md:col-start-3 col-start-2 col-end-7 text-center md:col-end-6 md:mt-0 mt-4"
+        className="flex flex-col gap-6 row-start-11 row-end-12 px-2 col-start-2 col-end-7 md:col-end-5 md:mt-0 mt-8"
       >
-        <SectionTitle title="ABOUT" />
+        <SectionTitle title="About" />
+        <div className="leading-6 text-[0.9em]">
+          Minoru Farm operates 4 acres of land in the Front Range town of
+          Brighton, Colorado. Established in 2020, the farm practices low-till
+          methods and is owned and operated by Jade Sato. <br /> <br />{" "}
+          Specializing in growing Asian vegetables, you can find Minoru Farm
+          produce at the City Park Farmers Market and at local restaurants
+          around Denver. <br /> <br /> Restaurants include:{" "}
+          <Link
+            className="underline"
+            href="https://www.instagram.com/yuanwonton/"
+            target="_blank"
+          >
+            Yuan Wonton
+          </Link>
+          {", "}
+          <Link
+            className="underline"
+            href="https://www.stowawaydenver.com/"
+            target="_blank"
+          >
+            Stowaway
+          </Link>
+          {", "}
+          and more!
+          <br /> <br />
+        </div>
       </div>
 
-      <div className="leading-6 md:text-[0.85em] text-[0.75em] font-thin row-start-12 row-end-13 col-start-2 md:col-end-5 col-end-7 md:text-start text-center px-2 md:mt-0 mt-2">
-        Minoru Farm operates 4 acres of land in the Front Range town of
-        Brighton, Colorado. Established in 2020, the farm practices low-till
-        methods and is owned and operated by Jade Sato. <br /> <br />{" "}
-        Specializing in growing Asian vegetables, you can find Minoru Farm
-        produce at the City Park Farmers Market and at local restaurants around
-        Denver. <br /> <br /> Restaurants include:{" "}
-        <Link
-          className="underline"
-          href="https://www.instagram.com/yuanwonton/"
-          target="_blank"
-        >
-          Yuan Wonton
-        </Link>
-        {", "}
-        <Link
-          className="underline"
-          href="https://www.stowawaydenver.com/"
-          target="_blank"
-        >
-          Stowaway
-        </Link>
-        {", "}
-        and more!
-        <br /> <br />
-      </div>
-
-      <div className="flex md:ml-4 row-start-13 row-end-14 w-full md:row-start-11 md:py-6 md:row-end-13 md:col-start-5 col-start-2 col-end-7 md:col-end-8 mb-4 md:mb-0">
+      <div className="flex md:ml-4 row-start-13 row-end-14 w-full md:row-start-11 md:row-end-12 md:col-start-5 col-start-2 col-end-7 md:col-end-8 mb-4 md:mb-0">
         <Image
           src="/minoru-farm-tomatoes-two.jpg"
           alt="minoru farm tomatoes-two"
@@ -125,7 +86,7 @@ export default function Home() {
         id="press"
         className="flex flex-col gap-4 md:gap-8 w-full p-2 row-start-15 row-end-16 col-start-2 col-end-8 my-4 md:mb-0"
       >
-        <SectionTitle title="PRESS" />
+        <SectionTitle title="Press" />
 
         <PressLink
           year="2025"

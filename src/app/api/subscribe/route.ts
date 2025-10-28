@@ -1,6 +1,4 @@
 import { google } from "googleapis";
-
-import type { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
