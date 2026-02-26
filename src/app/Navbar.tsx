@@ -27,11 +27,6 @@ export const Navbar = () => {
           CSA
         </Link>
       </div>
-      <div className="flex items-center justify-center row-start-1 my-3 md:my-0 row-end-3 md:col-start-6 md:col-end-7 col-start-5 col-end-6">
-        <Link href="/recipes" className={getLinkClassName("/recipes")}>
-          RECIPES
-        </Link>
-      </div>
     </>
   );
 };
